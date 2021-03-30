@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Data Form"
+            android:textSize="38sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_typeofvehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="Type of Vehicle"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_form"
+            app:layout_constraintStart_toStartOf="@+id/tv_form"
+            app:layout_constraintTop_toBottomOf="@+id/tv_form" />
+
+        <RadioGroup
+            android:id="@+id/rg_typeofvehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_typeofvehicle"
+            tools:layout_editor_absoluteX="0dp">
+
+            <RadioButton
+                android:id="@+id/rb_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="Car" />
+
+            <RadioButton
+                android:id="@+id/rb_bike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="Bike" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Brand"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/rg_typeofvehicle" />
+
+        <EditText
+            android:id="@+id/et_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Name"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_brand" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_licensenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="License Number"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <EditText
+            android:id="@+id/et_licensenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_licensenumber" />
+
+        <TextView
+            android:id="@+id/tv_topspeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Top Speed"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/et_gascapacity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_licensenumber" />
+
+        <EditText
+            android:id="@+id/et_topspeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_topspeed"
+            app:layout_constraintStart_toStartOf="@+id/tv_topspeed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_topspeed" />
+
+
+        <TextView
+            android:id="@+id/tv_gascapacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Gas Capacity"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf=""
+            app:layout_constraintStart_toEndOf="@+id/tv_topspeed"
+            app:layout_constraintTop_toBottomOf="@+id/et_licensenumber" />
+
+        <EditText
+            android:id="@+id/et_gascapacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gascapacity"
+            app:layout_constraintStart_toEndOf="@+id/tv_topspeed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gascapacity" />
+
+
+        <TextView
+            android:id="@+id/tv_wheel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Wheel"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_gascapacity"
+            app:layout_constraintTop_toBottomOf="@+id/et_licensenumber" />
+
+        <EditText
+            android:id="@+id/et_wheel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wheel"
+            app:layout_constraintStart_toStartOf="@+id/tv_wheel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Type"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_wheel" />
+
+        <EditText
+            android:id="@+id/et_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Condition"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_type" />
+
+        <EditText
+            android:id="@+id/et_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_type" />
+
+        <RadioGroup
+            android:id="@+id/rgcondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_condition">
+
+            <RadioButton
+                android:id="@+id/rb_New"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="New" />
+
+            <RadioButton
+                android:id="@+id/rb_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="Used" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgcondition"
+            app:layout_constraintEnd_toStartOf="@id/btn_hide"
+            android:layout_marginHorizontal="8dp"/>
+
+        <Button
+            android:id="@+id/btn_hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="HIDE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgcondition"
+            app:layout_constraintStart_toEndOf="@id/btn_submit"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/result_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:visibility="gone"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_submit" />
+
+        <TextView
+            android:id="@+id/tv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/result_name"
+            android:text="Vehicle Photo"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_image"/>
+
+        <Button
+            android:id="@+id/btn_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Photo"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/et_image"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_baseline_username"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
